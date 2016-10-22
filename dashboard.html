@@ -18,37 +18,75 @@
 	html, body, div {
 	  height: 100%;
 	  padding: 5px;
-	  border: 1px solid black;
-	}
-
-	.row {
-	  height: 50%;
 	}
 
 	.menu {
 		height: 10%;
 	}
 
+	.content {
+		height: 85%;
+	}
+
+	.half-height {
+		height: 50%;
+	}
+
+	#numUsers {
+		padding: 10px;
+		text-align: center;
+	}
 	</style>
 </head>
 <body>
 <div class="container-fluid">
-	<div class="menu">
+	<div class="menu row">
 		<div class="col-sm-12">Menu</div>
 	</div>
-	<div class="content">
-		<div class="col-md-4">
+	<div class="content row">
+		<div class="col-md-4 half-height">
 			MENU YEEEEE
 		</div>
-		<div class="col-md-8">
-			<div class="row">
-				<div id="numUsers" class="col-sm-4"></div>
+		<div class="col-md-8 half-height">
+				<div id="numUsers" class="col-sm-4">
+					<h3>Right now</h3>
+					<h1>30</h1>
+					<p>Active people at this shelter</p>
+				</div>
 				<div id="graph" class="col-sm-8"></div>
-			</div>
-			<div class="row">
-				<div id="userList" class="col-sm-4"></div>
-				<div id="userFocus" class="col-sm-8"></div>
-			</div>
+				<div id="userList" class="col-sm-4">
+					<table>
+						<th>
+							<td>User ID</td>
+						</th>
+						<tr>
+							<td>119253</td>
+						</tr>
+						<tr>
+							<td>8675309</td>
+						</tr>
+						<tr>
+							<td>22467</td>
+						</tr>
+						<tr>
+							<td>14029</td>
+						</tr>
+						<tr>
+							<td>672832</td>
+						</tr>
+					</table>
+				</div>
+				<div id="userFocus" class="col-sm-8">
+					<h2>119253</h2>
+					<p>Check in: <span id="intime">8:32pm, October 22nd, 2016</span></p>
+					<p>Check out: <span id="outtime"></span></p>
+					<p>Other Locations:</p>
+						<ul>
+							<li>Service 1</li>
+							<li>Shelter 2</li>
+							<li>Serivce 2</li>
+						</ul>
+				</div>
 		</div>
 	</div>
 </div>
